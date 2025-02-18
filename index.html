@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Ad Demonstration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .ad-banner {
+            background-color: red;
+            color: white;
+            padding: 15px;
+            font-size: 18px;
+            cursor: pointer;
+            margin: 20px;
+            display: block;
+        }
+        .real-download {
+            background-color: green;
+            color: white;
+            padding: 15px;
+            font-size: 20px;
+            cursor: pointer;
+            margin-top: 30px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Download Your Book Solutions</h2>
+
+    <!-- Fake ads (which should be blocked) -->
+    <div class="ad-banner google-ad" onclick="fakeAdClick()">📥 Click Here to Download Fast!</div>
+    <div class="ad-banner sponsored-ad" onclick="fakeAdClick()">🔽 Get Solutions Now!</div>
+    <div class="ad-banner pop-up-ad" onclick="fakeAdClick()">⚠️ Secure Download (Ad)</div>
+
+    <!-- Real download button -->
+    <div class="real-download" onclick="realDownload()">✅ Official Download</div>
+
+    <!-- Load external fake ad script (GitHub-hosted or custom domain) -->
+    <script src="https://minhagi.github.io/fake-ad-network/fake-ad.js"></script>
+
+    <script>
+        function fakeAdClick() {
+            alert("Oops! You clicked a fake ad! Imagine this installed malware.");
+            window.location.href = "https://malicious-site.com"; // Fake redirection
+        }
+
+        function realDownload() {
+            alert("Good job! This is the real download button.");
+        }
+    </script>
+
+</body>
+</html>
